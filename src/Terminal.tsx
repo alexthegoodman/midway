@@ -63,7 +63,7 @@ const CmnTerminal: React.FC = () => {
     };
 
     setupXterm();
-  }, []);
+  });
 
   useEffect(() => {
     const handleResize = () => {
