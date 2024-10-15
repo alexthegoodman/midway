@@ -1,15 +1,16 @@
+import { ThemeOptions } from "@mui/material";
 import { amber, deepOrange, grey } from "@mui/material/colors";
 
 // import NextLink from "next/link";
 // import { forwardRef } from "react";
-import {merge} from "ts-deepmerge";
+import { merge } from "ts-deepmerge";
 
 // const LinkBehaviour = forwardRef(function LinkBehaviour(props, ref) {
 //   return <NextLink ref={ref} {...props} />;
 // });
 
 export const getThemeOptions = (mode: string) => {
-  let options = {
+  let options: ThemeOptions = {
     palette: {
       mode: "dark",
       primary: {
@@ -126,7 +127,7 @@ export const getThemeOptions = (mode: string) => {
       },
       MuiButtonBase: {
         defaultProps: {
-        //   LinkComponent: LinkBehaviour,
+          //   LinkComponent: LinkBehaviour,
           disableRipple: true,
         },
       },
@@ -200,11 +201,11 @@ export const getThemeOptions = (mode: string) => {
           },
         },
       },
-      MuiPaper: {
-        root: {
-          borderRadius: "25px",
-        },
-      },
+      // MuiPaper: {
+      //   root: {
+      //     borderRadius: "25px",
+      //   },
+      // },
       MuiTypography: {
         styleOverrides: {
           h3: {
@@ -233,7 +234,7 @@ export const getThemeOptions = (mode: string) => {
   if (mode === "dark") {
     options = merge(options, {
       palette: {
-        mode: "dark",
+        // mode: "dark",
         primary: {
           main: "#FFFFFF",
         },
@@ -274,7 +275,7 @@ export const getThemeOptions = (mode: string) => {
   } else if (mode === "light") {
     options = merge(options, {
       palette: {
-        mode: "light",
+        // mode: "light",
         primary: {
           main: "#99c7a2",
         },
@@ -308,11 +309,11 @@ export const getThemeOptions = (mode: string) => {
         //     },
         //   },
         // },
-        MuiLink: {
-          root: {
-            color: "#515151",
-          },
-        },
+        // MuiLink: {
+        //   root: {
+        //     color: "#515151",
+        //   },
+        // },
       },
     });
   }
